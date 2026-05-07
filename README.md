@@ -14,7 +14,7 @@ Thanks for your interest in joining the F!ROSH 2T6 Tech Team! We've prepared a s
 2. **Make sure Node.js is installed** — download it at [nodejs.org](https://nodejs.org/en) if you haven't already
 3. **Navigate to the project directory** in your terminal
 4. Run `npm install` to install dependencies
-5. Run `npm start` and visit [http://localhost:3000](http://localhost:3000) — you should see a placeholder page that says "Your schedule goes here"
+5. Run `npm start` and visit [http://localhost:3000](http://localhost:3000) — you should see a placeholder page
 
 ---
 
@@ -38,13 +38,13 @@ We're not expecting polished senior-dev code. We want to see how quickly you can
 
 ## AI Usage Declaration
 
-You're welcome to use AI tools (ChatGPT, Claude, GitHub Copilot, etc.) while working on this challenge. Seriously, go for it — we use them too.
+You're welcome to use AI tools (ChatGPT, Claude, GitHub Copilot, etc.) while working on this challenge. Seriously, go for it, we use them too.
 
 **The one rule: declare it honestly in your PR description.**
 
 We've included an AI Usage Declaration section in the PR template. Fill it out truthfully: what tools you used, how you used them, and what you changed or reviewed afterward. We're not judging you for using AI. We *are* looking for honesty and self-awareness.
 
-Undeclared AI use is treated the same way as academic dishonesty — not because the tool is bad, but because hiding it tells us something about your character that matters more than your code.
+Undeclared AI use is treated the same way as academic dishonesty, not because the tool is bad, but because hiding it tells us something about your character that matters more than your code.
 
 ---
 
