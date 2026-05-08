@@ -57,7 +57,7 @@ Your page must:
 
 - **Display all events** across all 5 days in a clean, readable layout
 - **Highlight the color** — events are tagged with a `Color` value (`purple`, `dark-purple`, `yellow`, `green`, `gray`); use this to visually distinguish event types
-- **Be visually creative** — this is a Frosh Week page, we want to see your creativity. Have fun with it! We have provided some assets from previous years under the assets folder, you are free to use them.
+- **Be visually creative** — this is a Frosh Week page, we want to see your creativity. Have fun with it! We have provided some assets from previous years under the assets folder, you are free to use them or add your own assets!
 
 ### Not a React expert yet? That's completely fine.
 
