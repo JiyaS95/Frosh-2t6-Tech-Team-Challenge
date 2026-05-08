@@ -80,7 +80,7 @@ We've included an AI Usage Declaration section in the PR template. Fill it out t
 1. Commit your changes to your forked repo
 2. Open a **Pull Request** back to this repo
 3. Fill out the **PR template** completely (including the AI Usage Declaration)
-4. Applications are reviewed on a rolling basis — submit by 21/05/2026, 11:59 PM EST to be considered
+4. Applications are reviewed on a rolling basis. Submit by 21/05/2026, 11:59 PM EST to be considered
 
 ---
 You’ve reached the end of the coding challenge!
