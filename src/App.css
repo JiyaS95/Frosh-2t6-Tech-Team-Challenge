@@ -1,6 +1,106 @@
 /* TODO: Add your styles here */
 
-body {
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: sans-serif;
+  padding: 0;
+}
+
+body {
+  background-color: #1a0533;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 4rem;
+  text-align: center;
+  color: #f5c800;
+  letter-spacing: 4px;
+  text-shadow: 4px 4px 0px #7c3aed;
+  margin-bottom: 3rem;
+}
+
+.day-heading {
+  font-family: 'Bangers', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  color: white;
+  background: #7c3aed;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+  transform: rotate(-1deg);
+  display: inline-block;
+}
+
+.day-section {
+  margin-bottom: 3rem;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.event-card {
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  transform: rotate(0.5deg);
+  transition: transform 0.2s ease;
+}
+
+.event-card:nth-child(even) {
+  transform: rotate(-0.5deg);
+}
+
+.event-card:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.color-purple      { background: #7c3aed; }
+.color-dark-purple { background: #3b0764; border: 2px solid #7c3aed; }
+.color-yellow      { background: #f5c800; color: #1a0533; }
+.color-green       { background: #16a34a; }
+.color-gray        { background: #374151; }
+
+.event-time {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.event-location {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.event-desc {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-top: 0.4rem;
+  line-height: 1.5;
+}
+
+.event-desc a {
+  color: #f5c800;
 }
