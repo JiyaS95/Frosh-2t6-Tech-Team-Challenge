@@ -1,6 +1,4 @@
-/* TODO: Add your styles here */
-
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -9,43 +7,153 @@
 }
 
 body {
-  background-color: #1a0533;
-  font-family: 'Inter', sans-serif;
+  background-color: #05000f;
+  min-height: 100vh;
+  font-family: 'Nunito', sans-serif;
   color: white;
 }
 
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+.starry-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .app {
-  max-width: 800px;
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
   margin: 0 auto;
   padding: 2rem;
 }
 
+/* ---- HEADER ---- */
+.header {
+  text-align: center;
+  padding: 4rem 1rem 3rem 1rem;
+  position: relative;
+}
+
+.header-subtitle {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
 h1 {
   font-family: 'Bangers', cursive;
-  font-size: 4rem;
-  text-align: center;
+  font-size: 5rem;
+  line-height: 1;
   color: #f5c800;
-  letter-spacing: 4px;
-  text-shadow: 4px 4px 0px #7c3aed;
-  margin-bottom: 3rem;
+  letter-spacing: 6px;
+  text-shadow:
+    0 0 20px rgba(245, 200, 0, 0.4),
+    0 0 60px rgba(245, 200, 0, 0.15),
+    4px 4px 0px #7c3aed,
+    8px 8px 0px rgba(0,0,0,0.3);
+  margin-bottom: 1rem;
+}
+
+.header-date {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 5px;
+  color: #c9a84c;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.header-stars {
+  font-size: 1.5rem;
+  letter-spacing: 12px;
+  color: #f5c800;
+  margin: 1rem 0;
+  display: block;
+  opacity: 0.8;
+}
+
+.header-line {
+  width: 80%;
+  margin: 1.5rem auto 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c9a84c, #7c3aed, #c9a84c, transparent);
+  position: relative;
+}
+
+.header-line::before,
+.header-line::after {
+  content: '✦';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f5c800;
+  font-size: 1rem;
+}
+.header-line::before { left: 10%; }
+.header-line::after  { right: 10%; }
+
+/* ---- DAY SECTIONS ---- */
+.day-section {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.day-heading-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.day-number {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #c9a84c;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: 1px solid #c9a84c;
+  border-radius: 50%;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(201, 168, 76, 0.4);
+  flex-shrink: 0;
 }
 
 .day-heading {
   font-family: 'Bangers', cursive;
-  font-size: 2.5rem;
-  letter-spacing: 3px;
+  font-size: 2rem;
+  letter-spacing: 4px;
   color: white;
-  background: #7c3aed;
-  padding: 0.5rem 1.5rem;
-  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #3b0764, #5b21b6);
+  padding: 0.35rem 1.2rem;
+  border-radius: 8px;
   transform: rotate(-1deg);
   display: inline-block;
+  border-bottom: 3px solid #f5c800;
+  border-right: 3px solid #f5c800;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.5),
+              0 0 40px rgba(124, 58, 237, 0.15);
 }
 
-.day-section {
-  margin-bottom: 3rem;
-}
-
+/* ---- EVENT CARDS ---- */
 .events-list {
   display: flex;
   flex-direction: column;
@@ -53,10 +161,24 @@ h1 {
 }
 
 .event-card {
-  border-radius: 12px;
-  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  padding: 1rem 1.4rem;
   transform: rotate(0.5deg);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+}
+
+/* Celestial shimmer line on each card */
+.event-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
 }
 
 .event-card:nth-child(even) {
@@ -64,38 +186,94 @@ h1 {
 }
 
 .event-card:hover {
-  transform: rotate(0deg) scale(1.02);
+  transform: rotate(0deg) scale(1.02) translateY(-3px);
 }
 
-.color-purple      { background: #7c3aed; }
-.color-dark-purple { background: #3b0764; border: 2px solid #7c3aed; }
-.color-yellow      { background: #f5c800; color: #1a0533; }
-.color-green       { background: #16a34a; }
-.color-gray        { background: #374151; }
+/* ---- COLORS ---- */
+.color-purple {
+  background: linear-gradient(135deg, #6d28d9cc, #8b5cffcc);
+  box-shadow: 0 4px 24px rgba(124, 58, 237, 0.5),
+              inset 0 1px 0 rgba(255,255,255,0.1);
+  border: 1px solid rgba(159, 90, 255, 0.4);
+}
+.color-purple:hover {
+  box-shadow: 0 8px 35px rgba(124, 58, 237, 0.8),
+              0 0 60px rgba(124, 58, 237, 0.2);
+}
 
+.color-dark-purple {
+  background: linear-gradient(135deg, #1e0545cc, #3b0f7acc);
+  border: 1px solid rgba(124, 58, 237, 0.6);
+  box-shadow: 0 4px 24px rgba(80, 0, 180, 0.5),
+              inset 0 1px 0 rgba(201,168,76,0.1);
+}
+.color-dark-purple:hover {
+  box-shadow: 0 8px 35px rgba(124, 58, 237, 0.7),
+              0 0 40px rgba(201, 168, 76, 0.1);
+}
+
+.color-yellow {
+  background: linear-gradient(135deg, #2a1500cc, #4a2800cc);
+  color: #f5c800;
+  box-shadow: 0 4px 24px rgba(245, 200, 0, 0.2),
+              inset 0 1px 0 rgba(255,255,255,0.05);
+  border: 1px solid rgba(245, 200, 0, 0.35);
+}
+.color-yellow:hover {
+  box-shadow: 0 8px 35px rgba(245, 200, 0, 0.4);
+}
+.color-yellow .event-time,
+.color-yellow .event-name,
+.color-yellow .event-location,
+.color-yellow .event-desc {
+  color: #f5c800;
+}
+
+.color-green {
+  background: linear-gradient(135deg, #065f2fcc, #16a34acc);
+  box-shadow: 0 4px 24px rgba(34, 197, 94, 0.35),
+              inset 0 1px 0 rgba(255,255,255,0.1);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+.color-green:hover {
+  box-shadow: 0 8px 35px rgba(34, 197, 94, 0.6);
+}
+
+.color-gray {
+  background: linear-gradient(135deg, #1a1030cc, #2a1a45cc);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* ---- TEXT ---- */
 .event-time {
-  font-size: 0.8rem;
-  opacity: 0.85;
-  margin-bottom: 0.25rem;
-  font-weight: 700;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  opacity: 0.85;
+  margin-bottom: 0.3rem;
+  color: rgba(255,255,255,0.9);
 }
 
 .event-name {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: white;
   margin-bottom: 0.25rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .event-location {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   opacity: 0.8;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
 }
 
 .event-desc {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   opacity: 0.75;
   margin-top: 0.4rem;
   line-height: 1.5;
@@ -103,4 +281,6 @@ h1 {
 
 .event-desc a {
   color: #f5c800;
+  font-weight: 700;
+  text-decoration: underline;
 }
