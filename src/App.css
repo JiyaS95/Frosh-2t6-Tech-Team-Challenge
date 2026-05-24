@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka+One&family=Nunito:wght@400;700;900&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +6,7 @@
 }
 
 body {
-  background-color: #05000f;
+  background-color: #08001a;
   min-height: 100vh;
   font-family: 'Nunito', sans-serif;
   color: white;
@@ -40,13 +39,12 @@ body {
 .header {
   text-align: center;
   padding: 4rem 1rem 3rem 1rem;
-  position: relative;
 }
 
 .header-subtitle {
   font-family: 'Nunito', sans-serif;
   font-size: 0.8rem;
-  letter-spacing: 8px;
+  letter-spacing: 5px;
   text-transform: uppercase;
   color: #c9a84c;
   margin-bottom: 1rem;
@@ -55,102 +53,77 @@ body {
 
 h1 {
   font-family: 'Bangers', cursive;
-  font-size: 5rem;
+  font-size: 6rem;
   line-height: 1;
   color: #f5c800;
-  letter-spacing: 6px;
+  letter-spacing: 8px;
   text-shadow:
-    0 0 20px rgba(245, 200, 0, 0.4),
-    0 0 60px rgba(245, 200, 0, 0.15),
-    4px 4px 0px #7c3aed,
-    8px 8px 0px rgba(0,0,0,0.3);
-  margin-bottom: 1rem;
+    0 0 30px rgba(245, 200, 0, 0.6),
+    0 0 80px rgba(245, 200, 0, 0.25),
+    4px 4px 0px #4a0d8f,
+    7px 7px 0px rgba(0,0,0,0.4);
+  margin-bottom: 0.75rem;
+}
+
+.header-stars {
+  display: block;
+  font-size: 1.3rem;
+  letter-spacing: 14px;
+  color: #f5c800;
+  margin: 0.5rem 0 0.75rem 0;
+  text-shadow: 0 0 12px rgba(245,200,0,0.6);
 }
 
 .header-date {
   font-family: 'Nunito', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 5px;
   color: #c9a84c;
   text-transform: uppercase;
   font-weight: 900;
 }
 
-.header-stars {
-  font-size: 1.5rem;
-  letter-spacing: 12px;
-  color: #f5c800;
-  margin: 1rem 0;
-  display: block;
-  opacity: 0.8;
-}
-
 .header-line {
-  width: 80%;
+  width: 75%;
   margin: 1.5rem auto 0 auto;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #c9a84c, #7c3aed, #c9a84c, transparent);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a84c, #9f5aff, #c9a84c, transparent);
   position: relative;
 }
-
-.header-line::before,
-.header-line::after {
-  content: '✦';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #f5c800;
-  font-size: 1rem;
-}
-.header-line::before { left: 10%; }
-.header-line::after  { right: 10%; }
 
 /* ---- DAY SECTIONS ---- */
 .day-section {
   margin-bottom: 4rem;
-  position: relative;
 }
 
 .day-heading-wrapper {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-bottom: 1.25rem;
-  position: relative;
 }
 
 .day-number {
   font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 900;
-  color: #c9a84c;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  border: 1px solid #c9a84c;
-  border-radius: 50%;
-  width: 2.8rem;
-  height: 2.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 12px rgba(201, 168, 76, 0.4);
-  flex-shrink: 0;
+  color: #f5c800;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(245,200,0,0.5);
+  white-space: nowrap;
 }
 
 .day-heading {
   font-family: 'Bangers', cursive;
-  font-size: 2rem;
-  letter-spacing: 4px;
-  color: white;
-  background: linear-gradient(135deg, #3b0764, #5b21b6);
-  padding: 0.35rem 1.2rem;
-  border-radius: 8px;
-  transform: rotate(-1deg);
-  display: inline-block;
-  border-bottom: 3px solid #f5c800;
-  border-right: 3px solid #f5c800;
-  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.5),
-              0 0 40px rgba(124, 58, 237, 0.15);
+  font-size: 2.2rem;
+  letter-spacing: 5px;
+  color: #f5c800;
+  text-shadow:
+    0 0 15px rgba(245,200,0,0.4),
+    2px 2px 0px #4a0d8f;
+  border-bottom: 2px solid rgba(245,200,0,0.4);
+  padding-bottom: 4px;
+  flex: 1;
 }
 
 /* ---- EVENT CARDS ---- */
@@ -163,85 +136,84 @@ h1 {
 .event-card {
   border-radius: 14px;
   padding: 1rem 1.4rem;
-  transform: rotate(0.5deg);
+  transform: rotate(0.4deg);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(4px);
 }
 
-/* Celestial shimmer line on each card */
 .event-card::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
 }
 
 .event-card:nth-child(even) {
-  transform: rotate(-0.5deg);
+  transform: rotate(-0.4deg);
 }
 
 .event-card:hover {
   transform: rotate(0deg) scale(1.02) translateY(-3px);
 }
 
-/* ---- COLORS ---- */
+/* ---- COLORS — strict purple & gold ---- */
+/* purple = bright purple */
 .color-purple {
-  background: linear-gradient(135deg, #6d28d9cc, #8b5cffcc);
-  box-shadow: 0 4px 24px rgba(124, 58, 237, 0.5),
+  background: linear-gradient(135deg, #6d28d9, #8b5cf6);
+  box-shadow: 0 4px 24px rgba(109,40,217,0.5),
               inset 0 1px 0 rgba(255,255,255,0.1);
-  border: 1px solid rgba(159, 90, 255, 0.4);
+  border: 1px solid rgba(167,139,250,0.3);
 }
 .color-purple:hover {
-  box-shadow: 0 8px 35px rgba(124, 58, 237, 0.8),
-              0 0 60px rgba(124, 58, 237, 0.2);
+  box-shadow: 0 8px 35px rgba(109,40,217,0.8);
 }
 
+/* dark-purple = deep violet */
 .color-dark-purple {
-  background: linear-gradient(135deg, #1e0545cc, #3b0f7acc);
-  border: 1px solid rgba(124, 58, 237, 0.6);
-  box-shadow: 0 4px 24px rgba(80, 0, 180, 0.5),
-              inset 0 1px 0 rgba(201,168,76,0.1);
+  background: linear-gradient(135deg, #2e0068, #4a0d8f);
+  border: 1px solid rgba(159,90,255,0.5);
+  box-shadow: 0 4px 24px rgba(74,13,143,0.6),
+              inset 0 1px 0 rgba(245,200,0,0.07);
 }
 .color-dark-purple:hover {
-  box-shadow: 0 8px 35px rgba(124, 58, 237, 0.7),
-              0 0 40px rgba(201, 168, 76, 0.1);
+  box-shadow: 0 8px 35px rgba(109,40,217,0.7);
 }
 
+/* yellow = warm gold (replaces the awful blue) */
 .color-yellow {
-  background: linear-gradient(135deg, #2a1500cc, #4a2800cc);
-  color: #f5c800;
-  box-shadow: 0 4px 24px rgba(245, 200, 0, 0.2),
-              inset 0 1px 0 rgba(255,255,255,0.05);
-  border: 1px solid rgba(245, 200, 0, 0.35);
+  background: linear-gradient(135deg, #7a4f00, #b07800);
+  color: #fff8dc;
+  box-shadow: 0 4px 24px rgba(180,120,0,0.4),
+              inset 0 1px 0 rgba(255,255,255,0.08);
+  border: 1px solid rgba(245,200,0,0.4);
 }
 .color-yellow:hover {
-  box-shadow: 0 8px 35px rgba(245, 200, 0, 0.4);
+  box-shadow: 0 8px 35px rgba(245,200,0,0.5);
 }
 .color-yellow .event-time,
 .color-yellow .event-name,
 .color-yellow .event-location,
 .color-yellow .event-desc {
-  color: #f5c800;
+  color: #fff8dc;
 }
 
+/* green = deep emerald — kept but darkened to not clash */
 .color-green {
-  background: linear-gradient(135deg, #065f2fcc, #16a34acc);
-  box-shadow: 0 4px 24px rgba(34, 197, 94, 0.35),
-              inset 0 1px 0 rgba(255,255,255,0.1);
-  border: 1px solid rgba(34, 197, 94, 0.4);
+  background: linear-gradient(135deg, #0a1a5e, #1a3a9f);
+  box-shadow: 0 4px 20px rgba(26,58,159,0.5),
+              inset 0 1px 0 rgba(255,255,255,0.08);
+  border: 1px solid rgba(100,140,255,0.3);
 }
 .color-green:hover {
-  box-shadow: 0 8px 35px rgba(34, 197, 94, 0.6);
+  box-shadow: 0 8px 30px rgba(26,58,159,0.7);
 }
 
+/* gray = muted purple-dark */
 .color-gray {
-  background: linear-gradient(135deg, #1a1030cc, #2a1a45cc);
-  border: 1px solid rgba(201, 168, 76, 0.25);
+  background: linear-gradient(135deg, #1a0f35, #261545);
+  border: 1px solid rgba(201,168,76,0.2);
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
@@ -249,32 +221,32 @@ h1 {
 .event-time {
   font-size: 0.72rem;
   font-weight: 900;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  opacity: 0.85;
+  opacity: 0.8;
   margin-bottom: 0.3rem;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
 }
 
 .event-name {
-  font-family: 'Bangers', cursive;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-  color: white;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  color: #f5c800;
   margin-bottom: 0.25rem;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  text-shadow: 0 0 12px rgba(245,200,0,0.35);
 }
 
 .event-location {
   font-size: 0.82rem;
-  opacity: 0.8;
+  opacity: 0.75;
   margin-bottom: 0.2rem;
   font-weight: 700;
 }
 
 .event-desc {
   font-size: 0.88rem;
-  opacity: 0.75;
+  opacity: 0.72;
   margin-top: 0.4rem;
   line-height: 1.5;
 }
